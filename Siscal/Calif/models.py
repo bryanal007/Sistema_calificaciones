@@ -26,7 +26,7 @@ class Docente(models.Model):
 class Materia(models.Model):
     id = models.AutoField(primary_key=True, unique=True)
     Nombre = models.CharField(max_length=30, blank=False, null=True)
-    Cedula = models.ForeignKey(Docente, on_delete=models.RESTRICT)
+    Cedula = models.ForeignKey(Docente,verbose_name="Nombre del docente: ", on_delete=models.RESTRICT)
 
     def __str__(self):
         return self.Nombre
